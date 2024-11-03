@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# React_study
+React프로젝트 생성해서 실행해보기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React
+1. User Interface를 효율적으로 구성하는 JavaScript라이브러리이다
+2. Web SAP를 구현해주는 Front-End JavaScript프레임워크이다
 
-## Available Scripts
+### 핵심 기술
++ Virtual DOM : 실제 DOM을 가상으로 표현한 것으로 빠르고 간편하게 UI를 렌더링한다
 
-In the project directory, you can run:
+### 프론트엔드 템플릿 엔진
++ 서버에서 처리한 데이터를 클라이언트가 받아서 자바스크립트 객체들과 조합해서 DOM으로 구성하여 제공한다
 
-### `yarn start`
+### 서버에서 데이터를 받아오는 것 - React 자체 기능이 아니므로 할 수 없다
+1. ajax, fetch API, web socket, sse등은 직접 구현하여 데이터 받아오기
+2. 별도의 라이브러리를 이용하여 데이터 받아오기
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## React 프로젝트 생성하기 전 필요한 환경 설정
++ Node.js 설치 - 공식 웹사이트에서 다운로드
+  + Node.js : JavaScript 런타임 환경으로, 서버에서도 JavaScript를 실행할 수 있게한다
+  + 설치확인 : **node --version**
++ npm 설치 - Node.js를 설치하면 기본적으로 npm도 함께 설치된다
+  + 패키지 관리도구로 사용한다
+  + 설치확인 : **npm --version**
++ yarn 설치
+  + npm과 유사한 패키지 관리 도구이다
+  + 속도와 캐싱 성능이 뛰어나다
+  + 설치하기 : **npm install --global yarn**
+  + 설치확인 : **yarn --version**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## React 프로젝트 생성하기
+**yam create react-app 앱이름**
 
-### `yarn test`
+## React 프로젝트 실행하기
+앱이름이 있는 디렉토리로 이동해서 프로젝트 실행하기
+**yam start**
+![image](https://github.com/user-attachments/assets/39a27dc4-d80c-4b3f-b0b7-e96ac167d645)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### 배포파일 생성하기
+**yarn build**
++ build 디렉토리가 생성되며 배포 가능한 번들파일(HTML, CSS, JavaScript 파일)을 생성한다
++ build 디렉토리의 파일들을 웹 서버에 업로드하여 실제 서비스 환경에서 사용할 수 있다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### 일반적인 배포 방법
+AWS S3, Netlify, Vercel, GitHub Pages 등으로 배포한다 
